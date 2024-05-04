@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://bw7v7kp0qr2wi"]
+
+[ext_resource type="Script" path="res://Scenes/masked_dude.gd" id="1_r1bdv"]
+[ext_resource type="Texture2D" uid="uid://bv8duseq3cwoh" path="res://Fall (32x32).png" id="2_d8hin"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v54pi"]
+size = Vector2(42, 53)
+
+[node name="Masked Dude" type="CharacterBody2D"]
+script = ExtResource("1_r1bdv")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-12, 10.5)
+scale = Vector2(1.75, 1.65625)
+texture = ExtResource("2_d8hin")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-9, 10.5)
+shape = SubResource("RectangleShape2D_v54pi")
